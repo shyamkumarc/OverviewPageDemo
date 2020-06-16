@@ -1,0 +1,151 @@
+{
+	"_version": "1.7.0",
+	"start_url": "start.html",
+	"sap.app": {
+		"id": "test.test",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{app_title}}",
+		"description": "{{app_description}}",
+		"ach": "abc",
+		"resources": "resources.json",
+		"dataSources": {
+			"NorthwindModel": {
+				"uri": "/here/goes/your/serviceurl/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"annotations": [
+						"localAnnotations_1"
+					],
+					"localUri": "localService/NorthwindModel/metadata.xml"
+				}
+			},
+			"localAnnotations_1": {
+				"uri": "localService/NorthwindModel/localAnnotations_1.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/NorthwindModel/localAnnotations_1.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "OVP.cardtemplate",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_fiori_3"
+		]
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "1.38.34",
+			"libs": {
+				"sap.ovp": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"@i18n": {
+				"preload": true,
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"NorthwindModel": {
+				"dataSource": "NorthwindModel",
+				"settings": {
+					"defaultCountMode": "Inline",
+					"metadataUrlParams": {
+						"sap-value-list": "none"
+					}
+				}
+			}
+		},
+		"extends": {
+			"extensions": {}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.fiori": {
+		"registrationIds": [],
+		"archeType": "analytical"
+	},
+	"sap.ovp": {
+		"globalFilterModel": "NorthwindModel",
+		"globalFilterEntitySet": "",
+		"enableLiveFilter": true,
+		"containerLayout": "resizable",
+		"smartVariantRequired": true,
+		"showBasicSearch": true,
+		"cards": {
+			"card00": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.table",
+				"settings": {
+					"title": "{{card00_title}}",
+					"entitySet": "Sales_by_Categories",
+					"addODataSelect": false,
+				"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#intentQaulifier"
+				}
+			},
+			"card01": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.list",
+				"settings": {
+					"title": "{{card01_title}}",
+					"entitySet": "Sales_by_Categories",
+					"listType": "condensed",
+					"listFlavor": "bar",
+					"addODataSelect": false
+				}
+			},
+			"Dcard5_cardchartsline": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card01_title}}",
+					"subTitle": "{{card01_title}}",
+					
+					"valueSelectionInfo": "{{card01_title}}",
+					"entitySet": "Sales_by_Categories",
+					"chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#chartQualifier",
+					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#intentQaulifier",
+					"navigation" : "chartNav"
+				}
+			},
+			"Dcard6_cardchartsline": {
+				"model": "NorthwindModel",
+				"template": "sap.ovp.cards.charts.analytical",
+				"settings": {
+					"title": "{{card01_title}}",
+					"subTitle": "{{card01_title}}",
+					"valueSelectionInfo": "{{card01_title}}",
+					"entitySet": "Order_Details_Extendeds",
+					"chartAnnotationPath" : "com.sap.vocabularies.UI.v1.Chart#chartQualifier2",
+					"identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#intentQaulifier",
+					"navigation" : "chartNav"
+				}
+			}
+		}
+	}
+}

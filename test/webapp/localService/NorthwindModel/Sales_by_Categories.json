@@ -1,0 +1,62 @@
+[
+{
+"CategoryID": 1,
+"CategoryName": "Beverages",
+"ProductName": "Chai",
+"ProductSales": 4887.0000
+},
+{
+"CategoryID": 1,
+"CategoryName": "Food",
+"ProductName": "Chang",
+"ProductSales": 7038.5500
+},
+{
+"CategoryID": 1,
+"CategoryName": "Desserts",
+"ProductName": "Chartreuse verte",
+"ProductSales": 4475.7000
+},
+{
+"CategoryID": 1,
+"CategoryName": "Quick Eats",
+"ProductName": "C\u00f4te de Blaye",
+"ProductSales": 49198.0900
+},
+{
+"CategoryID": 1,
+"CategoryName": "packed food",
+"ProductName": "Guaran\u00e1 Fant\u00e1stica",
+"ProductSales": 1630.1300
+},
+{
+"CategoryID": 1,
+"CategoryName": "Groceries",
+"ProductName": "Ipoh Coffee",
+"ProductSales": 11069.9000
+},
+{
+"CategoryID": 1,
+"CategoryName": "Bakery",
+"ProductName": "Ipoh Coffee",
+"ProductSales": 11069.9000
+},
+{
+"CategoryID": 1,
+"CategoryName": "Meat",
+"ProductName": "Ipoh Coffee",
+"ProductSales": 11069.9000
+},
+{
+"CategoryID": 1,
+"CategoryName": "Stationery",
+"ProductName": "Ipoh Coffee",
+"ProductSales": 11069.9000
+},
+{
+"CategoryID": 1,
+"CategoryName": "Clothing",
+"ProductName": "Ipoh Coffee",
+"ProductSales": 11069.9000
+}
+]
